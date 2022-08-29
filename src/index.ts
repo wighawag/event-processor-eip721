@@ -1,4 +1,4 @@
-import { ContractsInfo, EventWithId } from 'ethereum-indexer';
+import { EventWithId } from 'ethereum-indexer';
 import { GenericSingleEventProcessor, Database, fromSingleEventProcessor } from 'ethereum-indexer-processors';
 
 import { logs } from 'named-logs';

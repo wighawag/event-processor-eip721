@@ -14,13 +14,13 @@
   },
   "dependencies": {
     "dotenv": "^16.0.1",
-    "ethereum-indexer": "^0.0.12",
-    "ethereum-indexer-processors": "^0.1.4",
+    "ethereum-indexer": "^0.0.14",
+    "ethereum-indexer-processors": "^0.1.5",
     "named-logs": "^0.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.6.2",
-    "ethereum-indexer-server": "^0.2.8",
+    "ethereum-indexer-server": "^0.2.14",
     "tsup": "^6.2.1",
     "typescript": "^4.7.4"
   },
