@@ -15,17 +15,18 @@
   "dependencies": {
     "dotenv": "^16.0.1",
     "ethereum-indexer": "^0.0.11",
-    "ethereum-indexer-processors": "^0.1.1",
+    "ethereum-indexer-processors": "^0.1.2",
     "named-logs": "^0.2.0"
   },
   "devDependencies": {
     "@types/node": "^18.6.2",
-    "ethereum-indexer-server": "^0.2.1",
+    "ethereum-indexer-server": "^0.2.4",
     "tsup": "^6.2.1",
     "typescript": "^4.7.4"
   },
   "scripts": {
-    "test": "eis run -p ./dist/index.cjs",
+    "eis": "eis",
+    "test": "eis run -p ./dist/index.cjs --wait --disableCache",
     "build": "tsup-node src/index.ts --dts --format esm,cjs"
   }
 }
