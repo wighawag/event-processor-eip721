@@ -5,7 +5,7 @@ specifiers:
   dotenv: ^16.0.1
   ethereum-indexer: ^0.0.11
   ethereum-indexer-processors: ^0.1.2
-  ethereum-indexer-server: ^0.2.5
+  ethereum-indexer-server: ^0.2.6
   named-logs: ^0.2.0
   tsup: ^6.2.1
   typescript: ^4.7.4
@@ -18,7 +18,7 @@ dependencies:
 
 devDependencies:
   '@types/node': 18.7.13
-  ethereum-indexer-server: 0.2.5
+  ethereum-indexer-server: 0.2.6
   tsup: 6.2.3_typescript@4.8.2
   typescript: 4.8.2
 
@@ -972,8 +972,8 @@ packages:
     transitivePeerDependencies:
       - encoding
 
-  /ethereum-indexer-server/0.2.5:
-    resolution: {integrity: sha512-ULVRvPCrXL2h+KGA+tzoN8v11nrKgWAq3lj/gC0n98+x5gJrJ1KbLvUFc7542szUw/OtFnDWzqkKfH/5P0M7bg==}
+  /ethereum-indexer-server/0.2.6:
+    resolution: {integrity: sha512-SJGXoHWO91BApF2AXscON7+0/+ZNnq6upqNg1KTqf3sZ6ej+P5CumBSyWV27eYc8vKcVk7qYXJFLM+lsUEnlUA==}
     hasBin: true
     dependencies:
       '@ethersproject/bignumber': 5.7.0

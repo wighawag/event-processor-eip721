@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@types/node": "^18.6.2",
-    "ethereum-indexer-server": "^0.2.5",
+    "ethereum-indexer-server": "^0.2.6",
     "tsup": "^6.2.1",
     "typescript": "^4.7.4"
   },
