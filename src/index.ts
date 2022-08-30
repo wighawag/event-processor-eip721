@@ -1,9 +1,9 @@
 import {
   EventWithId,
   Database,
-  GenericSingleEventProcessor,
+  SingleEventProcessorObject,
   PutAndGetDatabase,
-  fromSingleEventProcessor,
+  fromSingleEventProcessorObject,
 } from 'ethereum-indexer-processors';
 
 import { logs } from 'named-logs';
@@ -15,7 +15,7 @@ const console = logs('ERC721EventProcessor');
 
 const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
 
-export class ERC721EventProcessor extends GenericSingleEventProcessor {
+const ERC721EventProcessor: SingleEventProcessorObject = {
   async setup(db: Database): Promise<void> {
     await db.setup({
       indexes: [
@@ -34,16 +34,16 @@ export class ERC721EventProcessor extends GenericSingleEventProcessor {
         },
       ],
     });
-  }
+  },
 
-  async onTransfer(event: EventWithId): Promise<void> {
+  async onTransfer(db: PutAndGetDatabase, event: EventWithId): Promise<void> {
     const to = event.args.to as string;
     const from = event.args.from as string;
     const tokenID = event.args.id as string;
     const tokenContract = event.address;
     const id = `Token_${tokenContract}_${tokenID}`;
 
-    let token = await this.db.get<Token>(id);
+    let token = await db.get<Token>(id);
 
     if (!token) {
       console.info(`new token ${id}: with owner: ${to}`);
@@ -58,7 +58,7 @@ export class ERC721EventProcessor extends GenericSingleEventProcessor {
       console.info(`token ${id} already exists`);
       if (to === ZERO_ADDRESS) {
         console.info(`deleting it...`);
-        await this.db.delete(id);
+        await db.delete(id);
         return;
       } else {
         console.info(`setting new owner: ${to}`);
@@ -66,14 +66,14 @@ export class ERC721EventProcessor extends GenericSingleEventProcessor {
       }
     }
 
-    await this.db.put(token);
-  }
-}
+    await db.put(token);
+  },
+};
 
 // we export a factory function called processor
-// the helper "fromSingleEventProcessor" will transform the single event processor...
+// the helper "fromSingleEventProcessorObject" will transform the single event processor...
 // ... into the processor type expected by ethereum-indexer-server
-export const processor = fromSingleEventProcessor(() => new ERC721EventProcessor());
+export const processor = fromSingleEventProcessorObject(() => ERC721EventProcessor);
 
 // we expose contractsData as generic to be used on any chain
 export const contractsData = {
