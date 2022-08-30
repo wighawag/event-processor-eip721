@@ -25,7 +25,7 @@
   },
   "scripts": {
     "eis": "eis",
-    "test": "eis run -p ./dist/index.cjs --wait --disableCache",
+    "test": "eis run -p ./dist/index.cjs",
     "build": "tsup-node src/index.ts --dts --format esm,cjs"
   }
 }
