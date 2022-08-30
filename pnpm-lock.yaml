@@ -3,8 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/node': ^18.6.2
   dotenv: ^16.0.1
-  ethereum-indexer: ^0.0.14
-  ethereum-indexer-processors: ^0.1.5
+  ethereum-indexer-processors: ^0.1.6
   ethereum-indexer-server: ^0.2.14
   named-logs: ^0.2.0
   tsup: ^6.2.1
@@ -12,8 +11,7 @@ specifiers:
 
 dependencies:
   dotenv: 16.0.1
-  ethereum-indexer: 0.0.14
-  ethereum-indexer-processors: 0.1.5
+  ethereum-indexer-processors: 0.1.6
   named-logs: 0.2.0
 
 devDependencies:
@@ -960,8 +958,8 @@ packages:
     hasBin: true
     dev: true
 
-  /ethereum-indexer-processors/0.1.5:
-    resolution: {integrity: sha512-Jha6ChsVC7bbxRiDXzIG4f6UvMtdADw4pVS8keckWIPpcflvbwuU+DzAmJMncn7PhhkLZRm1ga9SoiaRfipDTQ==}
+  /ethereum-indexer-processors/0.1.6:
+    resolution: {integrity: sha512-CPtIyAblMNukcUn0GQjP9tIhtpSXWwCP6d9Z0HmhcRIMmVJnO0w02tzoJLDgmpZOuJ3k+7U/K1dh5UMX1/A5QA==}
     dependencies:
       '@ethersproject/bignumber': 5.7.0
       dotenv: 16.0.1
@@ -982,7 +980,7 @@ packages:
       '@types/node-fetch': 2.6.2
       dotenv: 16.0.1
       ethereum-indexer: 0.0.14
-      ethereum-indexer-processors: 0.1.5
+      ethereum-indexer-processors: 0.1.6
       koa: 2.13.4
       koa-bodyparser: 4.3.0
       koa-json: 2.0.2
@@ -1013,6 +1011,7 @@ packages:
       '@ethersproject/address': 5.7.0
       '@ethersproject/bytes': 5.7.0
       named-logs: 0.2.0
+    dev: true
 
   /event-target-shim/5.0.1:
     resolution: {integrity: sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==}

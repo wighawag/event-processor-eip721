@@ -1,5 +1,10 @@
-import { EventWithId } from 'ethereum-indexer';
-import { GenericSingleEventProcessor, Database, fromSingleEventProcessor } from 'ethereum-indexer-processors';
+import {
+  EventWithId,
+  Database,
+  GenericSingleEventProcessor,
+  PutAndGetDatabase,
+  fromSingleEventProcessor,
+} from 'ethereum-indexer-processors';
 
 import { logs } from 'named-logs';
 import { Token } from './database';
