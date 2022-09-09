@@ -5,3 +5,5 @@ data/
 .vscode/
 log.txt
 ethereum-indexer-data
+.yalc
+yalc.lock

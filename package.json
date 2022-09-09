@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "dotenv": "^16.0.1",
-    "ethereum-indexer-processors": "^0.1.6",
+    "ethereum-indexer-processors": "0.1.7",
     "named-logs": "^0.2.0"
   },
   "devDependencies": {

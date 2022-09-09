@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/node': ^18.6.2
   dotenv: ^16.0.1
-  ethereum-indexer-processors: ^0.1.6
+  ethereum-indexer-processors: 0.1.7
   ethereum-indexer-server: ^0.2.14
   named-logs: ^0.2.0
   tsup: ^6.2.1
@@ -11,7 +11,7 @@ specifiers:
 
 dependencies:
   dotenv: 16.0.1
-  ethereum-indexer-processors: 0.1.6
+  ethereum-indexer-processors: 0.1.7
   named-logs: 0.2.0
 
 devDependencies:
@@ -958,8 +958,8 @@ packages:
     hasBin: true
     dev: true
 
-  /ethereum-indexer-processors/0.1.6:
-    resolution: {integrity: sha512-CPtIyAblMNukcUn0GQjP9tIhtpSXWwCP6d9Z0HmhcRIMmVJnO0w02tzoJLDgmpZOuJ3k+7U/K1dh5UMX1/A5QA==}
+  /ethereum-indexer-processors/0.1.7:
+    resolution: {integrity: sha512-8zVSuhJIprCyI/et8sKwyRohI8TeUz7mLG4BxBvu6dOLTfnYvURIqOfXS/60RlNiDdc9C53en3hfgWwp1f4KBg==}
     dependencies:
       '@ethersproject/bignumber': 5.7.0
       dotenv: 16.0.1
@@ -980,7 +980,7 @@ packages:
       '@types/node-fetch': 2.6.2
       dotenv: 16.0.1
       ethereum-indexer: 0.0.14
-      ethereum-indexer-processors: 0.1.6
+      ethereum-indexer-processors: 0.1.7
       koa: 2.13.4
       koa-bodyparser: 4.3.0
       koa-json: 2.0.2
